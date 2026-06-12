@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | MGTECHNZ</title>
-    <meta name="description" content="Get in touch with MGTECHNZ — Waikato based, serving all NZ. Call, email or use our form. Fast response guaranteed.">
+    <meta name="description" content="Get in touch with MGTECHNZ — Waikato based, serving all NZ. Call, email, or use our professional contact form. Fast response guaranteed.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -50,36 +50,52 @@
 <section class="page-header">
     <div class="container">
         <h1 class="fade-in">Get In Touch</h1>
-        <p class="fade-in">We’re here to help — reach out anytime, we respond fast</p>
+        <p class="fade-in">We’re here to help — reach out anytime, we respond within 24 hours guaranteed</p>
     </div>
-    <div class="blue-curve"></div>
+    <div class="blue-divider"></div>
 </section>
 
 <!-- Contact Section -->
 <section class="section">
     <div class="container">
         <div class="contact-wrapper fade-in-up">
+            <!-- Contact Form -->
             <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+                <h2 style="margin-bottom: 1.8rem; color: var(--secondary);">Send Us A Message</h2>
+                
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Full Name" required>
+                    <input type="text" name="name" placeholder="Your Full Name *" required>
                     <i class="fa-solid fa-user"></i>
                 </div>
+
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email Address" required>
+                    <input type="email" name="email" placeholder="Your Email Address *" required>
                     <i class="fa-solid fa-envelope"></i>
                 </div>
+
                 <div class="form-group">
                     <input type="tel" name="phone" placeholder="Phone Number">
                     <i class="fa-solid fa-phone"></i>
                 </div>
+
                 <div class="form-group">
-                    <textarea name="message" rows="6" placeholder="Tell us about your project or problem..." required></textarea>
-                    <i class="fa-solid fa-comment"></i>
+                    <input type="text" name="subject" placeholder="Subject *" required>
+                    <i class="fa-solid fa-heading"></i>
                 </div>
+
+                <div class="form-group">
+                    <textarea name="message" rows="6" placeholder="Tell us about your project, problem, or question... *" required></textarea>
+                    <i class="fa-solid fa-comment-dots"></i>
+                </div>
+
                 <button type="submit" class="btn primary-btn w-100">Send Message <i class="fa-solid fa-paper-plane"></i></button>
             </form>
+
+            <!-- Contact Info -->
             <div class="contact-info-box">
                 <h3>Contact Details</h3>
+                <p style="color: var(--medium); margin-bottom: 1.8rem;">Feel free to contact us directly or use the form. We’d love to hear from you.</p>
+
                 <div class="contact-item">
                     <i class="fa-solid fa-envelope"></i>
                     <div>
@@ -87,13 +103,7 @@
                         <p>info@mgtechnz.kiwi</p>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Waikato, New Zealand</p>
-                    </div>
-                </div>
+
                 <div class="contact-item">
                     <i class="fa-solid fa-phone"></i>
                     <div>
@@ -101,13 +111,23 @@
                         <p>02X XXX XXXX</p>
                     </div>
                 </div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Waikato, New Zealand<br>Serving all regions nationwide</p>
+                    </div>
+                </div>
+
                 <div class="contact-item">
                     <i class="fa-solid fa-clock"></i>
                     <div>
                         <h4>Business Hours</h4>
-                        <p>Mon - Fri: 8:00AM - 5:00PM</p>
+                        <p>Monday – Friday: 8:00AM – 5:00PM<br>Emergency support: 24/7</p>
                     </div>
                 </div>
+
                 <div class="social-icons">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -115,6 +135,15 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container fade-in">
+        <h2>Need urgent assistance?</h2>
+        <p>Call us directly — our team is ready to help you right now</p>
+        <a href="tel:02XXXXXXX" class="btn primary-btn">Call 02X XXX XXXX</a>
     </div>
 </section>
 
@@ -127,7 +156,7 @@
                     <img src="logo.png" alt="MGTECHNZ Logo" class="logo-img">
                     <span class="logo-text">MGTECH<span>NZ</span></span>
                 </div>
-                <p>Smart technology solutions helping NZ businesses grow. Local support, trusted expertise, modern results.</p>
+                <p>Professional technology solutions helping NZ businesses grow. Local support, trusted expertise, modern results.</p>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
@@ -144,7 +173,7 @@
                 <ul>
                     <li><a href="services.html">Web Development</a></li>
                     <li><a href="services.html">IT Support</a></li>
-                    <li><a href="services.html">Tech Consulting</a></li>
+                    <li><a href="services.html">Consulting</a></li>
                     <li><a href="services.html">Custom Solutions</a></li>
                 </ul>
             </div>
@@ -155,6 +184,7 @@
     </div>
 </footer>
 
+<!-- Scripts -->
 <script>
 window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
