@@ -3,54 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MGTECHNZ | Smart Technology Solutions New Zealand</title>
-    <meta name="description" content="MGTECHNZ delivers reliable IT support, web development, tech consulting and custom solutions across New Zealand. Based in Waikato, serving all NZ.">
+    <title>MGTECHNZ | Technology & IT Solutions New Zealand</title>
+    <meta name="description" content="MGTECHNZ — Leading IT services, technology solutions and support across New Zealand. Local, reliable, professional.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+
+<!-- Top Bar (like example) -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content">
+            <div class="contact-info-top">
+                <span>📧 info@mgtechnz.kiwi</span>
+                <span>📍 Waikato, New Zealand</span>
+            </div>
+            <div class="social-links">
+                <a href="#">f</a>
+                <a href="#">in</a>
+                <a href="#">ig</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Navigation -->
 <nav class="navbar">
     <div class="container">
-        <a href="/" class="logo">MGTECH<span>NZ</span></a>
+        <a href="/" class="logo">
+            <img src="logo.png" alt="MGTECHNZ Logo" class="logo-img">
+            <span class="logo-text">MGTECH<span>NZ</span></span>
+        </a>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="quote-btn">Get A Quote</a></li>
         </ul>
     </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero Section — EXACT STYLE LIKE YOUR IMAGE -->
 <section id="home" class="hero">
-    <div class="container hero-content">
-        <h1>Smart Technology Solutions <br> For Your Business</h1>
-        <p>Based in Waikato, New Zealand — we deliver fast, reliable IT services, web development and tech support you can trust.</p>
-        <div class="hero-buttons">
-            <a href="#contact" class="btn primary-btn">Get a Free Quote</a>
-            <a href="#services" class="btn secondary-btn">Our Services</a>
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <p class="subheading">TECHNOLOGY & IT SOLUTIONS</p>
+            <h1>Excellent IT Services <br> For Your Success</h1>
+            <p>We are leading technology solutions providing company across New Zealand — delivering reliable, smart, and scalable IT support and systems for businesses of all sizes.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn primary-btn">Get A Quote</a>
+                <a href="#services" class="btn secondary-btn">Our Services</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="hero-image.jpg" alt="IT Services Team" class="hero-img">
         </div>
     </div>
+    <!-- Blue curve shape -->
+    <div class="blue-curve"></div>
 </section>
 
 <!-- About Section -->
 <section id="about" class="section light-bg">
     <div class="container">
         <h2>About MGTECHNZ</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <p>MGTECHNZ is a local New Zealand technology business dedicated to helping small and medium-sized businesses grow through smart, practical tech solutions.</p>
-                <p>We combine technical expertise with honest, friendly service — no jargon, just results. Whether you need ongoing IT support, a professional website, or custom systems built, we’re here to make technology work for you.</p>
-                <p>We serve clients across Waikato and all of New Zealand — online or in-person.</p>
+        <p>Based in Waikato, we are proud to be a local New Zealand owned and operated technology business. With years of experience, we help businesses grow through better technology — no jargon, just results.</p>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h3>✅ Local Expertise</h3>
+                <p>We understand NZ business needs and work right here, locally.</p>
             </div>
-            <div class="about-features">
-                <div class="feature-item">✅ Local NZ Owned & Operated</div>
-                <div class="feature-item">✅ Fast Response Times</div>
-                <div class="feature-item">✅ Fixed Price & Transparent Pricing</div>
-                <div class="feature-item">✅ 100% NZ Based Support</div>
+            <div class="feature-box">
+                <h3>✅ Trusted & Reliable</h3>
+                <p>Fast response, clear pricing, and long-term support you can count on.</p>
+            </div>
+            <div class="feature-box">
+                <h3>✅ Full Service</h3>
+                <p>From websites to full IT infrastructure — we do it all.</p>
             </div>
         </div>
     </div>
@@ -63,67 +93,41 @@
         <div class="services-grid">
             <div class="service-card">
                 <h3>💻 Web Development</h3>
-                <p>Professional, fast, mobile-friendly websites built to grow your business. Hosting, domains, SEO and updates all handled for you.</p>
+                <p>Modern, fast, secure websites built to grow your brand and generate leads.</p>
             </div>
             <div class="service-card">
                 <h3>🔧 IT Support & Maintenance</h3>
-                <p>Ongoing support, troubleshooting, network setup, hardware/software repairs, and system management — keep your business running smoothly.</p>
+                <p>Ongoing support, troubleshooting, network setup, and system management.</p>
             </div>
             <div class="service-card">
                 <h3>📊 Tech Consulting</h3>
-                <p>Expert advice to choose the right tools, plan your digital growth, improve security and streamline operations.</p>
+                <p>Strategic advice, security audits, and digital transformation planning.</p>
             </div>
             <div class="service-card">
                 <h3>⚙️ Custom Solutions</h3>
-                <p>Automation, custom software, integrations and tailored systems built exactly for your unique business needs.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="section light-bg">
-    <div class="container">
-        <h2>Our Work</h2>
-        <p class="section-subtitle">Projects we’ve delivered for NZ businesses</p>
-        <div class="portfolio-grid">
-            <div class="portfolio-item">
-                <h4>Local Business Website</h4>
-                <p>Modern, responsive site + hosting + email setup for a Waikato service company.</p>
-            </div>
-            <div class="portfolio-item">
-                <h4>Office IT Infrastructure</h4>
-                <p>Full network, server and security setup for a growing Hamilton office.</p>
-            </div>
-            <div class="portfolio-item">
-                <h4>Automation System</h4>
-                <p>Custom workflow automation saving 10+ hours per week for a retail business.</p>
+                <p>Automation, software, integrations built exactly for your workflow.</p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="section">
+<section id="contact" class="section blue-section">
     <div class="container">
         <h2>Get In Touch</h2>
-        <p class="section-subtitle">Ready to talk? We’d love to help your business succeed.</p>
         <div class="contact-wrapper">
             <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
                 <input type="text" name="name" placeholder="Your Full Name" required>
-                <input type="email" name="email" placeholder="Your Email Address" required>
+                <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Phone Number">
-                <textarea name="message" rows="6" placeholder="Tell us about your project or problem..." required></textarea>
-                <button type="submit" class="btn primary-btn">Send Message</button>
+                <textarea name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
+                <button type="submit" class="btn white-btn">Send Message</button>
             </form>
-            <div class="contact-info">
+            <div class="contact-info-box">
                 <h3>Contact Details</h3>
                 <p>📧 info@mgtechnz.kiwi</p>
                 <p>📍 Waikato, New Zealand</p>
-                <p>📞 0211111171 </p>
-              <div class="note">
-                    <p><em>We respond within 24 hours, NZ business days.</em></p>
-                </div>
+                <p>📞 0211111171</p>
             </div>
         </div>
     </div>
@@ -132,7 +136,7 @@
 <!-- Footer -->
 <footer class="footer">
     <div class="container">
-        <p>&copy; 2026 MGTECHNZ. All rights reserved. | Proudly NZ Owned & Operated</p>
+        <p>&copy; 2026 MGTECHNZ — Technology & IT Solutions NZ. All rights reserved.</p>
     </div>
 </footer>
 
