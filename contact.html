@@ -34,6 +34,194 @@
     <style>
         .active { border-bottom: 2px solid #0A0A0F; padding-bottom: 4px; }
         html { scroll-behavior: smooth; }
+        .form-input { transition: all 0.3s ease; }
+        .success-msg, .error-msg { display: none; }
     </style>
 </head>
 <body class="bg-brandWhite text-brandDark font-sans antialiased overflow-x-hidden">
+
+    <header class="w-full px-6 md:px-12 py-3 bg-white/95 backdrop-blur-sm shadow-sm fixed z-50 top-0 left-0 right-0 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- LOGO + BUSINESS NAME -->
+            <div class="flex items-center gap-3 animate-fade-in">
+                <img src="logo-transparent.png" alt="MGTECHNZ Logo" class="h-10 w-auto">
+                <span class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</span>
+            </div>
+
+            <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
+                <a href="index.html" class="hover:text-brandGray transition-colors">Home</a>
+                <a href="about.html" class="hover:text-brandGray transition-colors">About</a>
+                <a href="services.html" class="hover:text-brandGray transition-colors">Services</a>
+                <a href="contact.html" class="active transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-xl" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-100 transition-all duration-300">
+            <div class="flex flex-col gap-4 font-medium">
+                <a href="index.html" class="text-gray-600">Home</a>
+                <a href="about.html" class="text-gray-600">About</a>
+                <a href="services.html" class="text-gray-600">Services</a>
+                <a href="contact.html" class="text-brandDark">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-40 pb-24 md:pt-48 md:pb-32 bg-brandLight/50 relative">
+        <div class="absolute top-0 left-0 w-full h-full opacity-30">
+            <div class="absolute w-72 h-72 bg-brandSilver/20 rounded-full blur-3xl -top-20 -left-20"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
+            <h1 class="text-[clamp(2rem,4vw,3.5rem)] font-bold mb-6 animate-slide-up">Get In Touch</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mb-16 animate-slide-up" style="animation-delay: 0.2s">We’re here to help — reach out for a free consultation, support, or any questions you have about your business technology.</p>
+
+            <div class="grid md:grid-cols-3 gap-10 lg:gap-12">
+                <!-- Contact Info -->
+                <div class="md:col-span-1 space-y-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 animate-slide-up" style="animation-delay: 0.3s">
+                        <h3 class="text-xl font-semibold mb-6">Contact Information</h3>
+                        <ul class="space-y-5 text-gray-700">
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot text-brandDark text-xl mt-1"></i>
+                                <span>Waikato Region, New Zealand</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-envelope text-brandDark text-xl mt-1"></i>
+                                <span>info@mgtechnz.com</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-phone text-brandDark text-xl mt-1"></i>
+                                <span>+64 9 123 4567</span>
+                            </li>
+                        </ul>
+
+                        <div class="mt-10 pt-6 border-t border-gray-200">
+                            <h4 class="font-semibold mb-3">Business Hours</h4>
+                            <p class="text-gray-600 text-sm">Monday – Friday: 8:30am – 5:00pm<br>24/7 emergency support available</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-brandDark text-white rounded-2xl p-8 shadow-lg animate-slide-up" style="animation-delay: 0.4s">
+                        <h3 class="text-xl font-semibold mb-4">Quick Response</h3>
+                        <p class="text-brandSilver/90 text-sm">We aim to reply to all enquiries within 2 hours during business hours — or sooner!</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="md:col-span-2 bg-white rounded-2xl p-8 shadow-sm border border-gray-100 animate-slide-up" style="animation-delay: 0.5s">
+                    <!-- Success Message -->
+                    <div class="success-msg bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg mb-6">
+                        ✅ Thank you! Your message has been sent. We’ll get back to you soon.
+                    </div>
+                    <!-- Error Message -->
+                    <div class="error-msg bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg mb-6">
+                        ❌ Oops! Something went wrong. Please try again or email us directly.
+                    </div>
+
+                    <!-- FORM THAT ACTUALLY WORKS -->
+                    <form action="https://formspree.io/f/xbljvdoj" method="POST" id="contactForm" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark outline-none" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark outline-none" required>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark outline-none">
+                        </div>
+
+                        <div>
+                            <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service Interest</label>
+                            <select id="service" name="service" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark outline-none">
+                                <option value="">Select a service</option>
+                                <option value="cloud">Cloud Solutions</option>
+                                <option value="cyber">Cybersecurity</option>
+                                <option value="consulting">IT Consulting</option>
+                                <option value="managed">Managed IT Services</option>
+                                <option value="other">Other / General Enquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark outline-none" required></textarea>
+                        </div>
+
+                        <!-- Optional: Prevent spam -->
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_subject" value="New enquiry from MGTECHNZ website">
+                        <input type="hidden" name="_replyto" value="info@mgtechnz.com">
+
+                        <button type="submit" class="w-full bg-brandDark hover:bg-brandMid text-white font-medium py-3.5 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5">
+                            Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map / Location Section -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-bold text-center mb-12 animate-fade-in">Our Location</h2>
+            <div class="w-full h-[300px] bg-brandLight rounded-2xl flex items-center justify-center shadow-sm animate-slide-up">
+                <p class="text-gray-600">📍 Waikato, New Zealand — Serving clients nationwide</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 md:py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
+                <div>© 2026 MGTECHNZ. All rights reserved.</div>
+                <div class="flex gap-6">
+                    <a href="privacy-policy.html" class="hover:text-brandDark transition-colors">Privacy Policy</a>
+                    <span>info@mgtechnz.com</span>
+                    <span>+64 9 123 4567</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) header.classList.add('shadow-md', 'bg-white/98');
+            else header.classList.remove('shadow-md', 'bg-white/98');
+        });
+
+        // Show success/error messages after submit
+        const form = document.getElementById('contactForm');
+        const successMsg = document.querySelector('.success-msg');
+        const errorMsg = document.querySelector('.error-msg');
+
+        form.addEventListener('submit', function(e) {
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+        });
+
+        // Formspree fallback message
+        if (window.location.search.includes('success')) {
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+        }
+        if (window.location.search.includes('error')) {
+            errorMsg.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
