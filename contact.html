@@ -89,7 +89,7 @@
                             </li>
                             <li class="flex items-start gap-4">
                                 <i class="fa-solid fa-envelope text-brandDark text-xl mt-1"></i>
-                                <span>info@mgtechnz.com</span>
+                                <span>info@mgtechnz.kiwi</span>
                             </li>
                             <li class="flex items-start gap-4">
                                 <i class="fa-solid fa-phone text-brandDark text-xl mt-1"></i>
@@ -120,7 +120,7 @@
                         ❌ Oops! Something went wrong. Please try again or email us directly.
                     </div>
 
-                    <!-- FORM THAT ACTUALLY WORKS -->
+                    <!-- FORM THAT SENDS TO YOUR CORRECT EMAIL -->
                     <form action="https://formspree.io/f/xbljvdoj" method="POST" id="contactForm" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
@@ -155,10 +155,11 @@
                             <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark outline-none" required></textarea>
                         </div>
 
-                        <!-- Optional: Prevent spam -->
+                        <!-- Settings with CORRECT EMAIL -->
                         <input type="text" name="_honey" style="display:none">
                         <input type="hidden" name="_subject" value="New enquiry from MGTECHNZ website">
-                        <input type="hidden" name="_replyto" value="info@mgtechnz.com">
+                        <input type="hidden" name="_replyto" value="info@mgtechnz.kiwi">
+                        <input type="hidden" name="_to" value="info@mgtechnz.kiwi">
 
                         <button type="submit" class="w-full bg-brandDark hover:bg-brandMid text-white font-medium py-3.5 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5">
                             Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
@@ -186,7 +187,7 @@
                 <div>© 2026 MGTECHNZ. All rights reserved.</div>
                 <div class="flex gap-6">
                     <a href="privacy-policy.html" class="hover:text-brandDark transition-colors">Privacy Policy</a>
-                    <span>info@mgtechnz.com</span>
+                    <span>info@mgtechnz.kiwi</span>
                     <span>+64 9 123 4567</span>
                 </div>
             </div>
@@ -214,7 +215,6 @@
             successMsg.style.display = 'block';
         });
 
-        // Formspree fallback message
         if (window.location.search.includes('success')) {
             form.style.display = 'none';
             successMsg.style.display = 'block';
