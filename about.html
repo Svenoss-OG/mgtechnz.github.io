@@ -7,59 +7,115 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
-        tailwind.config = { theme: { extend: { colors: { brandDark:'#0A0A0F', brandMid:'#222429', brandGray:'#88929C', brandSilver:'#C8D0D8', brandWhite:'#F8F9FA' }, fontFamily: { sans: ['Inter','sans-serif'] } } } }
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#0A0A0F',
+                        brandMid: '#222429',
+                        brandGray: '#88929C',
+                        brandSilver: '#C8D0D8',
+                        brandWhite: '#FFFFFF',
+                        brandLight: '#F5F6F8'
+                    },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
     </script>
-    <style>.active{border-bottom:2px solid #222429;padding-bottom:2px;}</style>
+    <style>
+        .active { border-bottom: 2px solid #0A0A0F; padding-bottom: 4px; }
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
-<body class="bg-brandWhite text-brandDark font-sans">
-    <header class="w-full px-6 md:px-12 py-6 bg-white shadow-sm fixed z-50 top-0 left-0 right-0">
+<body class="bg-brandWhite text-brandDark font-sans antialiased">
+
+    <header class="w-full px-6 md:px-12 py-5 bg-white/95 backdrop-blur-sm shadow-sm fixed z-50 top-0 left-0 right-0">
         <nav class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-xl md:text-2xl font-bold tracking-wider">MGTECHNZ</div>
-            <div class="hidden md:flex gap-10 font-medium">
-                <a href="index.html" class="hover:text-brandGray">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="services.html" class="hover:text-brandGray">Services</a>
-                <a href="contact.html" class="hover:text-brandGray">Contact</a>
+            <div class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</div>
+            <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
+                <a href="index.html" class="hover:text-brandGray transition-colors">Home</a>
+                <a href="about.html" class="active transition-colors">About</a>
+                <a href="services.html" class="hover:text-brandGray transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-brandGray transition-colors">Contact</a>
             </div>
-            <div class="md:hidden text-xl"><i class="fa-solid fa-bars"></i></div>
+            <button class="md:hidden text-xl" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-100">
+            <div class="flex flex-col gap-4 font-medium">
+                <a href="index.html" class="text-gray-600">Home</a>
+                <a href="about.html" class="text-brandDark">About</a>
+                <a href="services.html" class="text-gray-600">Services</a>
+                <a href="contact.html" class="text-gray-600">Contact</a>
+            </div>
+        </div>
     </header>
 
-    <section class="pt-36 pb-20">
+    <section class="pt-40 pb-24 md:pt-48 md:pb-32 bg-brandLight/50">
         <div class="max-w-5xl mx-auto px-6 md:px-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-8">About MGTECHNZ</h1>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="md:col-span-2 space-y-6 text-gray-700 leading-relaxed">
-                    <p>MGTECHNZ is a New Zealand-based technology solutions provider focused on delivering reliable, modern IT services to businesses of all sizes. We combine technical expertise with a practical approach to help you grow securely.</p>
-                    <p>Founded on the belief that technology should enable, not hinder, your work, we offer clear guidance, scalable infrastructure, and robust security tailored to NZ’s business environment.</p>
-                    <h3 class="text-xl font-semibold mt-6">Our Mission</h3>
-                    <p>To empower local businesses through innovative, accessible, and future-proof technology solutions.</p>
-                    <h3 class="text-xl font-semibold mt-6">Our Values</h3>
+            <h1 class="text-[clamp(2rem,4vw,3.5rem)] font-bold mb-10">About MGTECHNZ</h1>
+
+            <div class="grid md:grid-cols-3 gap-10 lg:gap-12">
+                <div class="md:col-span-2 space-y-7 text-gray-700 leading-relaxed text-[15px] md:text-base">
+                    <p>MGTECHNZ is a New Zealand-owned and operated technology solutions provider, dedicated to delivering reliable, modern, and secure IT services to businesses of all sizes across the country.</p>
+                    <p>Founded on the belief that technology should enable and simplify your work — not complicate it — we combine deep technical expertise with a practical, down-to-earth approach. We understand the unique needs of NZ businesses and design solutions that fit your goals, budget, and growth plans.</p>
+
+                    <h3 class="text-xl font-semibold text-brandDark mt-8">Our Mission</h3>
+                    <p>To empower local businesses through innovative, accessible, and future-proof technology that drives efficiency, security, and success.</p>
+
+                    <h3 class="text-xl font-semibold text-brandDark mt-8">Our Core Values</h3>
                     <ul class="list-disc pl-5 space-y-2">
-                        <li>Transparency and integrity in everything we do</li>
-                        <li>Security-first mindset for all systems</li>
-                        <li>Local support and long-term partnerships</li>
-                        <li>Continuous improvement and innovation</li>
+                        <li><strong class="text-brandDark">Transparency & Integrity</strong> — clear pricing, honest advice, no hidden costs</li>
+                        <li><strong class="text-brandDark">Security First</strong> — every solution is built with protection as a priority</li>
+                        <li><strong class="text-brandDark">Local Partnership</strong> — we’re here for the long term, supporting NZ businesses</li>
+                        <li><strong class="text-brandDark">Continuous Improvement</strong> — always learning, always evolving</li>
                     </ul>
                 </div>
-                <div class="bg-brandDark rounded-xl p-6 text-white shadow-lg">
-                    <h4 class="text-xl font-semibold mb-4">Why Choose Us?</h4>
-                    <ul class="space-y-3 text-brandSilver">
-                        <li><i class="fa-solid fa-check mr-2"></i> NZ-based support</li>
-                        <li><i class="fa-solid fa-check mr-2"></i> Industry certified experts</li>
-                        <li><i class="fa-solid fa-check mr-2"></i> Transparent pricing</li>
-                        <li><i class="fa-solid fa-check mr-2"></i> Compliance with NZ regulations</li>
+
+                <div class="bg-brandDark rounded-2xl p-8 text-white shadow-lg h-fit">
+                    <h4 class="text-xl font-semibold mb-6 text-brandSilver">Why Choose Us?</h4>
+                    <ul class="space-y-4 text-[15px]">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brandSilver mt-1"></i>
+                            <span>100% NZ-based support and team</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brandSilver mt-1"></i>
+                            <span>Industry certified specialists</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brandSilver mt-1"></i>
+                            <span>Transparent, fixed-price agreements</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-brandSilver mt-1"></i>
+                            <span>Fully compliant with NZ regulations</span>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white border-t border-gray-200 py-6">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-            <div>© 2026 MGTECHNZ. All rights reserved.</div>
-            <div class="mt-2 md:mt-0"><a href="privacy-policy.html" class="hover:text-brandDark">Privacy Policy</a> | info@mgtechnz.com | +64 9 123 4567</div>
+    <footer class="bg-white border-t border-gray-200 py-10 md:py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
+                <div>© 2026 MGTECHNZ. All rights reserved.</div>
+                <div class="flex gap-6">
+                    <a href="privacy-policy.html" class="hover:text-brandDark transition-colors">Privacy Policy</a>
+                    <span>info@mgtechnz.com</span>
+                    <span>+64 9 123 4567</span>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
 </body>
 </html>

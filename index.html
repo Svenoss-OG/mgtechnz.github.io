@@ -15,75 +15,102 @@
                         brandMid: '#222429',
                         brandGray: '#88929C',
                         brandSilver: '#C8D0D8',
-                        brandWhite: '#F8F9FA'
+                        brandWhite: '#FFFFFF',
+                        brandLight: '#F5F6F8'
                     },
-                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
                 }
             }
         }
     </script>
     <style>
-        .glow { box-shadow: 0 0 25px rgba(200, 208, 216, 0.3); }
-        .active { border-bottom: 2px solid #222429; padding-bottom: 2px; }
+        .glow { box-shadow: 0 8px 30px rgba(200, 208, 216, 0.25); }
+        .active { border-bottom: 2px solid #0A0A0F; padding-bottom: 4px; }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-brandWhite text-brandDark font-sans">
-    <header class="w-full px-6 md:px-12 py-6 bg-white shadow-sm fixed z-50 top-0 left-0 right-0">
+<body class="bg-brandWhite text-brandDark font-sans antialiased">
+
+    <!-- Navigation -->
+    <header class="w-full px-6 md:px-12 py-5 bg-white/95 backdrop-blur-sm shadow-sm fixed z-50 top-0 left-0 right-0">
         <nav class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="text-xl md:text-2xl font-bold tracking-wider">MGTECHNZ</div>
-            <div class="hidden md:flex gap-10 font-medium">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html" class="hover:text-brandGray">About</a>
-                <a href="services.html" class="hover:text-brandGray">Services</a>
-                <a href="contact.html" class="hover:text-brandGray">Contact</a>
+            <div class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</div>
+            <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
+                <a href="index.html" class="active transition-colors">Home</a>
+                <a href="about.html" class="hover:text-brandGray transition-colors">About</a>
+                <a href="services.html" class="hover:text-brandGray transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-brandGray transition-colors">Contact</a>
             </div>
-            <div class="md:hidden text-xl"><i class="fa-solid fa-bars"></i></div>
+            <button class="md:hidden text-xl" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-100">
+            <div class="flex flex-col gap-4 font-medium">
+                <a href="index.html" class="text-brandDark">Home</a>
+                <a href="about.html" class="text-gray-600">About</a>
+                <a href="services.html" class="text-gray-600">Services</a>
+                <a href="contact.html" class="text-gray-600">Contact</a>
+            </div>
+        </div>
     </header>
 
-    <section class="pt-36 pb-20 min-h-screen flex items-center">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 grid md:grid-cols-2 gap-12 w-full">
-            <div class="flex flex-col justify-center space-y-8">
-                <h1 class="text-[clamp(2.8rem,5vw,4rem)] font-bold leading-tight tracking-tight">
-                    Innovating<br>Tomorrow's Tech
-                </h1>
-                <p class="text-lg text-gray-600">Delivering secure, scalable IT solutions for businesses across New Zealand.</p>
-                <div class="grid sm:grid-cols-2 gap-4">
-                    <div class="bg-gray-100 p-5 rounded-lg flex justify-between items-center hover:shadow-md transition">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-cloud text-xl text-brandGray"></i>
-                            <div><div class="font-semibold">Cloud Solutions</div><div class="text-sm text-gray-500">Scalable infrastructure</div></div>
+    <!-- Hero Section -->
+    <section class="pt-40 pb-24 md:pt-48 md:pb-32 bg-brandLight/50">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8 lg:space-y-10">
+                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-[1.05] tracking-tight">
+                        Innovating<br>Tomorrow's Tech
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 max-w-xl">
+                        Secure, scalable, and modern IT solutions built for New Zealand businesses.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 lg:gap-5 mt-4">
+                        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-cloud text-2xl text-brandGray"></i>
+                                <div>
+                                    <div class="font-semibold">Cloud Solutions</div>
+                                    <div class="text-sm text-gray-500 mt-1">Scalable infrastructure</div>
+                                </div>
+                            </div>
                         </div>
-                        <i class="fa-solid fa-angle-right text-gray-400"></i>
-                    </div>
-                    <div class="bg-brandDark text-white p-5 rounded-lg flex justify-between items-center glow hover:shadow-lg transition">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-shield text-xl text-brandSilver"></i>
-                            <div><div class="font-semibold">Cybersecurity</div><div class="text-sm text-gray-300">Protect your systems</div></div>
+                        <div class="bg-brandDark text-white rounded-xl p-6 shadow-md glow hover:shadow-lg transition-shadow">
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-shield text-2xl text-brandSilver"></i>
+                                <div>
+                                    <div class="font-semibold">Cybersecurity</div>
+                                    <div class="text-sm text-brandSilver/80 mt-1">Protect your business</div>
+                                </div>
+                            </div>
                         </div>
-                        <i class="fa-solid fa-angle-right text-gray-400"></i>
-                    </div>
-                    <div class="bg-gray-100 p-5 rounded-lg flex justify-between items-center hover:shadow-md transition">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-lightbulb text-xl text-brandGray"></i>
-                            <div><div class="font-semibold">IT Consulting</div><div class="text-sm text-gray-500">Expert strategy</div></div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-lightbulb text-2xl text-brandGray"></i>
+                                <div>
+                                    <div class="font-semibold">IT Consulting</div>
+                                    <div class="text-sm text-gray-500 mt-1">Expert strategy</div>
+                                </div>
+                            </div>
                         </div>
-                        <i class="fa-solid fa-angle-right text-gray-400"></i>
-                    </div>
-                    <div class="bg-gray-100 p-5 rounded-lg flex justify-between items-center hover:shadow-md transition">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-server text-xl text-brandGray"></i>
-                            <div><div class="font-semibold">Managed Services</div><div class="text-sm text-gray-500">24/7 support</div></div>
+                        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                            <div class="flex items-center gap-4">
+                                <i class="fa-solid fa-server text-2xl text-brandGray"></i>
+                                <div>
+                                    <div class="font-semibold">Managed Services</div>
+                                    <div class="text-sm text-gray-500 mt-1">24/7 support</div>
+                                </div>
+                            </div>
                         </div>
-                        <i class="fa-solid fa-angle-right text-gray-400"></i>
                     </div>
                 </div>
-            </div>
-            <div class="relative flex items-center justify-center">
-                <div class="rounded-2xl overflow-hidden shadow-2xl glow w-full h-[500px] bg-[#0F1116] flex items-center justify-center">
-                    <div class="w-60 h-60 rounded-3xl bg-gradient-to-br from-brandSilver to-brandDark flex items-center justify-center">
-                        <div class="w-32 h-32 bg-brandDark rounded-lg flex items-center justify-center border border-brandSilver/40">
-                            <img src="logo-transparent.png" alt="MGTECHNZ Logo" class="w-20 h-20 object-contain">
+
+                <div class="flex justify-center">
+                    <div class="relative w-full max-w-[400px] aspect-square rounded-3xl overflow-hidden shadow-2xl glow bg-gradient-to-br from-brandLight to-brandGray/10 flex items-center justify-center">
+                        <div class="w-4/5 h-4/5 rounded-2xl bg-brandDark/90 flex items-center justify-center border border-brandSilver/30 shadow-inner">
+                            <img src="logo-transparent.png" alt="MGTECHNZ Logo" class="w-3/5 h-3/5 object-contain">
                         </div>
                     </div>
                 </div>
@@ -91,13 +118,25 @@
         </div>
     </section>
 
-    <footer class="bg-white border-t border-gray-200 py-6">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
-            <div>© 2026 MGTECHNZ. All rights reserved.</div>
-            <div class="mt-2 md:mt-0">
-                <a href="privacy-policy.html" class="hover:text-brandDark">Privacy Policy</a> | info@mgtechnz.com | +64 9 123 4567
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 md:py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
+                <div>© 2026 MGTECHNZ. All rights reserved.</div>
+                <div class="flex gap-6">
+                    <a href="privacy-policy.html" class="hover:text-brandDark transition-colors">Privacy Policy</a>
+                    <span>info@mgtechnz.com</span>
+                    <span>+64 9 123 4567</span>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
 </body>
 </html>
