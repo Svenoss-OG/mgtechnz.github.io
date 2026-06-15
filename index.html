@@ -4,8 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MGTECHNZ | Innovating Tomorrow's Tech</title>
+    <!-- Fixed CDN links -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- SEO & Favicon -->
+    <meta name="description" content="MGTECHNZ offers professional website development, Roblox game creation, branding, and tech support based in Hamilton, New Zealand.">
+    <meta name="keywords" content="MGTECHNZ, Hamilton NZ, web development, Roblox development, digital solutions, tech services, New Zealand">
+    <meta name="author" content="MGTECHNZ">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mgtechnz.kiwi/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0A0A0F">
+
     <script>
         tailwind.config = {
             theme: {
@@ -39,35 +53,65 @@
         .active { border-bottom: 2px solid #0A0A0F; padding-bottom: 4px; }
         html { scroll-behavior: smooth; }
         .card-hover { transition: all 0.3s ease; }
+        /* NEW: Hamburger animation styles */
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: #0A0A0F;
+            margin: 5px auto;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        /* NEW: Mobile menu slide animation */
+        #mobileMenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobileMenu.show {
+            max-height: 300px;
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="bg-brandWhite text-brandDark font-sans antialiased overflow-x-hidden">
 
-    <!-- Navigation -->
+    <!-- Navigation - SAME ON ALL PAGES -->
     <header class="w-full px-6 md:px-12 py-3 bg-white/95 backdrop-blur-sm shadow-sm fixed z-50 top-0 left-0 right-0 transition-all duration-300">
         <nav class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- LOGO + BUSINESS NAME -->
             <div class="flex items-center gap-3 animate-fade-in">
-                <img src="logo-transparent.png" alt="MGTECHNZ Logo" class="h-10 w-auto">
+                <img src="/logo-transparent.png" alt="MGTECHNZ Logo" class="h-10 w-auto">
                 <span class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</span>
             </div>
 
             <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
-                <a href="index.html" class="active transition-colors hover:text-brandDark">Home</a>
-                <a href="about.html" class="hover:text-brandGray transition-colors hover:scale-105">About</a>
-                <a href="services.html" class="hover:text-brandGray transition-colors hover:scale-105">Services</a>
-                <a href="contact.html" class="hover:text-brandGray transition-colors hover:scale-105">Contact</a>
+                <a href="/home/" class="transition-colors hover:text-brandDark">Home</a>
+                <a href="/about/" class="transition-colors hover:text-brandGray hover:scale-105">About</a>
+                <a href="/services/" class="transition-colors hover:text-brandGray hover:scale-105">Services</a>
+                <a href="/contact/" class="transition-colors hover:text-brandGray hover:scale-105">Contact</a>
+                <a href="/privacy-policy/" class="transition-colors hover:text-brandGray hover:scale-105">Privacy Policy</a>
             </div>
-            <button class="md:hidden text-xl" id="mobileMenuBtn">
-                <i class="fa-solid fa-bars"></i>
+            
+            <!-- UPDATED: Animated Hamburger -->
+            <button class="md:hidden hamburger" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </nav>
-        <div id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-100 transition-all duration-300">
+        <div id="mobileMenu" class="md:hidden mt-4 pt-4 border-t border-gray-100">
             <div class="flex flex-col gap-4 font-medium">
-                <a href="index.html" class="text-brandDark">Home</a>
-                <a href="about.html" class="text-gray-600">About</a>
-                <a href="services.html" class="text-gray-600">Services</a>
-                <a href="contact.html" class="text-gray-600">Contact</a>
+                <a href="/home/" class="text-brandDark">Home</a>
+                <a href="/about/" class="text-gray-600">About</a>
+                <a href="/services/" class="text-gray-600">Services</a>
+                <a href="/contact/" class="text-gray-600">Contact</a>
+                <a href="/privacy-policy/" class="text-gray-600">Privacy Policy</a>
             </div>
         </div>
     </header>
@@ -126,7 +170,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="services.html" class="inline-block bg-brandDark hover:bg-brandMid text-white px-8 py-3.5 rounded-lg font-medium transition-all hover:shadow-lg hover:-translate-y-0.5 animate-slide-up" style="animation-delay: 0.7s">
+                    <a href="/services/" class="inline-block bg-brandDark hover:bg-brandMid text-white px-8 py-3.5 rounded-lg font-medium transition-all hover:shadow-lg hover:-translate-y-0.5 animate-slide-up" style="animation-delay: 0.7s">
                         View All Services <i class="fa-solid fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -134,7 +178,7 @@
                 <div class="flex justify-center">
                     <div class="relative w-full max-w-[400px] aspect-square rounded-3xl overflow-hidden shadow-2xl glow bg-gradient-to-br from-brandLight to-brandGray/10 flex items-center justify-center animate-float">
                         <div class="w-4/5 h-4/5 rounded-2xl bg-brandDark/90 flex items-center justify-center border border-brandSilver/30 shadow-inner">
-                            <img src="logo-transparent.png" alt="MGTECHNZ Logo" class="w-3/5 h-3/5 object-contain">
+                            <img src="/logo-transparent.png" alt="MGTECHNZ Logo" class="w-3/5 h-3/5 object-contain">
                         </div>
                     </div>
                 </div>
@@ -209,7 +253,7 @@
         <div class="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">
             <h2 class="text-[clamp(1.8rem,3vw,3rem)] font-bold mb-6 animate-fade-in">Ready to Transform Your Technology?</h2>
             <p class="text-lg md:text-xl text-brandSilver/90 mb-10 animate-fade-in" style="animation-delay: 0.2s">Let’s build a secure, scalable, and future-proof IT strategy that helps your business grow.</p>
-            <a href="contact.html" class="inline-block bg-white text-brandDark hover:bg-brandSilver px-10 py-4 rounded-lg font-semibold transition-all hover:shadow-xl hover:-translate-y-1 animate-fade-in" style="animation-delay: 0.4s">
+            <a href="/contact/" class="inline-block bg-white text-brandDark hover:bg-brandSilver px-10 py-4 rounded-lg font-semibold transition-all hover:shadow-xl hover:-translate-y-1 animate-fade-in" style="animation-delay: 0.4s">
                 Get Your Free Consultation
             </a>
         </div>
@@ -221,7 +265,7 @@
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
                 <div>© 2026 MGTECHNZ. All rights reserved.</div>
                 <div class="flex gap-6">
-                    <a href="privacy-policy.html" class="hover:text-brandDark transition-colors">Privacy Policy</a>
+                    <a href="/privacy-policy/" class="hover:text-brandDark transition-colors">Privacy Policy</a>
                     <span>info@mgtechnz.kiwi</span>
                     <span>+64 021 111 1171</span>
                 </div>
@@ -232,13 +276,32 @@
     <script>
         const btn = document.getElementById('mobileMenuBtn');
         const menu = document.getElementById('mobileMenu');
-        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+        // UPDATED: Smooth hamburger + slide menu animation
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            menu.classList.toggle('show');
+        });
+
+        // Close menu when clicking link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                btn.classList.remove('active');
+                menu.classList.remove('show');
+            });
+        });
 
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 20) header.classList.add('shadow-md', 'bg-white/98');
             else header.classList.remove('shadow-md', 'bg-white/98');
+        });
+
+        // Set active page link
+        const currentPath = window.location.pathname;
+        document.querySelectorAll('.nav-links a, .md\\:flex a').forEach(link => {
+            if (link.getAttribute('href') === currentPath) link.classList.add('active');
         });
     </script>
 </body>
