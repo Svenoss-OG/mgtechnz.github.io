@@ -55,7 +55,7 @@
     <!-- Custom Styles -->
     <style>
         .glow { box-shadow: 0 8px 30px rgba(200, 208, 216, 0.25); }
-        .active { border-bottom: 2px solid #0A0A0F; padding-bottom: 4px; }
+        .active { border-bottom: 2px solid #0A0A0F; padding-bottom: 4px; color: #0A0A0F !important; font-weight: 600; }
         html { scroll-behavior: smooth; }
         .card-hover { transition: all 0.3s ease; }
 
@@ -102,11 +102,13 @@
                 <span class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</span>
             </div>
 
-            <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
-                <a href="/home/" class="active transition-colors hover:text-brandDark">Home</a>
-                <a href="/about/" class="hover:text-brandGray transition-colors hover:scale-105">About</a>
-                <a href="/services/" class="hover:text-brandGray transition-colors hover:scale-105">Services</a>
-                <a href="/contact/" class="hover:text-brandGray transition-colors hover:scale-105">Contact</a>
+            <!-- DESKTOP MENU → NOW INCLUDES PRIVACY POLICY -->
+            <div class="hidden md:flex gap-6 lg:gap-8 font-medium text-[15px] items-center">
+                <a href="/" class="active transition-colors hover:text-brandDark">Home</a>
+                <a href="/about/" class="text-brandGray transition-colors hover:text-brandDark hover:scale-105">About</a>
+                <a href="/services/" class="text-brandGray transition-colors hover:text-brandDark hover:scale-105">Services</a>
+                <a href="/contact/" class="text-brandGray transition-colors hover:text-brandDark hover:scale-105">Contact</a>
+                <a href="/privacy-policy/" class="text-brandGray transition-colors hover:text-brandDark hover:scale-105 text-sm">Privacy Policy</a>
             </div>
 
             <!-- Animated Hamburger -->
@@ -116,9 +118,11 @@
                 <span></span>
             </button>
         </nav>
+
+        <!-- MOBILE MENU -->
         <div id="mobileMenu" class="md:hidden mt-4 pt-4 border-t border-gray-100">
             <div class="flex flex-col gap-4 font-medium">
-                <a href="/home/" class="text-brandDark active">Home</a>
+                <a href="/" class="text-brandDark active">Home</a>
                 <a href="/about/" class="text-gray-600">About</a>
                 <a href="/services/" class="text-gray-600">Services</a>
                 <a href="/contact/" class="text-gray-600">Contact</a>
