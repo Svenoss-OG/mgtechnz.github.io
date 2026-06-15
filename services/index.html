@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | MGTECHNZ</title>
+    <meta name="description" content="MGTECHNZ services: cloud solutions, cybersecurity, IT consulting, managed services, and custom development for NZ businesses.">
+    <link rel="canonical" href="https://mgtechnz.kiwi/services/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0A0A0F">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brandDark: '#0A0A0F', brandMid: '#222429', brandGray: '#88929C', brandSilver: '#C8D0D8', brandWhite: '#FFFFFF', brandLight: '#F5F6F8' },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    animation: { 'fade-in': 'fadeIn 0.8s ease-out forwards', 'slide-up': 'slideUp 0.8s ease-out forwards', 'float': 'float 6s ease-in-out infinite', 'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite' },
+                    keyframes: { fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } }, slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }, float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } } }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow { box-shadow: 0 8px 30px rgba(200, 208, 216, 0.25); }
+        .active { border-bottom: 2px solid #0A0A0F; padding-bottom: 4px; }
+        html { scroll-behavior: smooth; }
+        .card-hover { transition: all 0.3s ease; }
+        .hamburger span { display: block; width: 24px; height: 2px; background-color: #0A0A0F; margin: 5px 0; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.4s ease; opacity: 0; }
+        #mobileMenu.open { max-height: 300px; opacity: 1; }
+    </style>
+</head>
+<body class="bg-brandWhite text-brandDark font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="w-full px-6 md:px-12 py-3 bg-white/95 backdrop-blur-sm shadow-sm fixed z-50 top-0 left-0 right-0 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3 animate-fade-in">
+                <img src="/logo-transparent.png" alt="MGTECHNZ Logo" class="h-10 w-auto">
+                <span class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</span>
+            </div>
+            <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
+                <a href="/home/" class="hover:text-brandGray transition-colors hover:scale-105">Home</a>
+                <a href="/about/" class="hover:text-brandGray transition-colors hover:scale-105">About</a>
+                <a href="/services/" class="active transition-colors hover:text-brandDark">Services</a>
+                <a href="/contact/" class="hover:text-brandGray transition-colors hover:scale-105">Contact</a>
+            </div>
+            <button class="md:hidden hamburger" id="mobileMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="md:hidden mt-4 pt-4 border-t border-gray-100">
+            <div class="flex flex-col gap-4 font-medium">
+                <a href="/home/" class="text-gray-600">Home</a>
+                <a href="/about/" class="text-gray-600">About</a>
+                <a href="/services/" class="text-brandDark active">Services</a>
+                <a href="/contact/" class="text-gray-600">Contact</a>
+                <a href="/privacy-policy/" class="text-gray-600 text-sm">Privacy Policy</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Hero -->
+    <section class="pt-40 pb-20 md:pt-48 md:pb-28 bg-brandLight/50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-30">
+            <div class="absolute w-72 h-72 bg-brandSilver/20 rounded-full blur-3xl -top-20 -left-20"></div>
+            <div class="absolute w-72 h-72 bg-brandGray/20 rounded-full blur-3xl -bottom-20 -right-20"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 md:px-12 text-center relative z-10">
+            <h1 class="text-[clamp(2.2rem,4vw,3.5rem)] font-bold mb-6 animate-fade-in">Our Services</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s">Comprehensive IT solutions designed to secure, scale, and grow your New Zealand business.</p>
+        </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                <!-- Service 1 -->
+                <div class="bg-brandLight/50 rounded-2xl p-8 card-hover hover:shadow-lg hover:-translate-y-1 transition-all animate-slide-up" style="animation-delay: 0.1s">
+                    <div class="w-14 h-14 bg-brandDark/5 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-cloud text-2xl text-brandDark animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cloud Solutions</h3>
+                    <p class="text-gray-600 mb-4">Scalable, secure cloud infrastructure, migration, and management tailored to your business needs — hosted locally and globally.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Public, Private & Hybrid Cloud</li>
+                        <li>• Data Migration & Backup</li>
+                        <li>• 24/7 Cloud Management</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-brandDark text-white rounded-2xl p-8 shadow-md glow card-hover hover:shadow-xl hover:-translate-y-1 transition-all animate-slide-up" style="animation-delay: 0.2s">
+                    <div class="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-shield text-2xl text-brandSilver animate-pulse-slow"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Cybersecurity</h3>
+                    <p class="text-brandSilver/90 mb-4">End-to-end security protecting your data, systems, and customers — fully compliant with NZ Privacy Act and international standards.</p>
+                    <ul class="text-sm text-brandSilver/80 space-y-1">
+                        <li>• Threat Detection & Response</li>
+                        <li>• Firewall & Network Security</li>
+                        <li>• Compliance Audits</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-brandLight/50 rounded-2xl p-8 card-hover hover:shadow-lg hover:-translate-y-1 transition-all animate-slide-up" style="animation-delay: 0.3s">
+                    <div class="w-14 h-14 bg-brandDark/5 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-lightbulb text-2xl text-brandDark animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">IT Consulting</h3>
+                    <p class="text-gray-600 mb-4">Strategic technology planning, digital transformation, and expert advice to align IT with your business goals and growth.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Digital Strategy & Roadmap</li>
+                        <li>• System Audits & Optimisation</li>
+                        <li>• Vendor Management</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-brandLight/50 rounded-2xl p-8 card-hover hover:shadow-lg hover:-translate-y-1 transition-all animate-slide-up" style="animation-delay: 0.4s">
+                    <div class="w-14 h-14 bg-brandDark/5 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-server text-2xl text-brandDark animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Managed Services</h3>
+                    <p class="text-gray-600 mb-4">Complete outsourced IT support — proactive monitoring, maintenance, and helpdesk so you can focus on your business, not your tech.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• 24/7 Monitoring & Support</li>
+                        <li>• Server & Desktop Management</li>
+                        <li>• Regular Maintenance & Updates</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-brandLight/50 rounded-2xl p-8 card-hover hover:shadow-lg hover:-translate-y-1 transition-all animate-slide-up" style="animation-delay: 0.5s">
+                    <div class="w-14 h-14 bg-brandDark/5 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-code text-2xl text-brandDark animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Custom Development</h3>
+                    <p class="text-gray-600 mb-4">Bespoke software, web applications, and integrations built exactly to your requirements — from small tools to full enterprise systems.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Web & App Development</li>
+                        <li>• System Integrations</li>
+                        <li>• Software Upgrades</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-brandLight/50 rounded-2xl p-8 card-hover hover:shadow-lg hover:-translate-y-1 transition-all animate-slide-up" style="animation-delay: 0.6s">
+                    <div class="w-14 h-14 bg-brandDark/5 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-wifi text-2xl text-brandDark animate-float"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Network & Infrastructure</h3>
+                    <p class="text-gray-600 mb-4">Design, installation, and support of reliable, high-performance networks, servers, and communication systems for your office or remote team.</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• Network Design & Setup</li>
+                        <li>• Wi-Fi & Connectivity</li>
+                        <li>• Server Deployment & Support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-28 bg-brandDark text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-20">
+            <div class="absolute w-96 h-96 bg-brandSilver/10 rounded-full blur-3xl -top-40 -left-40"></div>
+            <div class="absolute w-96 h-96 bg-brandGray/10 rounded-full blur-3xl -bottom-40 -right-40"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">
+            <h2 class="text-[clamp(1.8rem,3vw,3rem)] font-bold mb-6 animate-fade-in">Ready to Get Started?</h2>
+            <p class="text-lg md:text-xl text-brandSilver/90 mb-10 animate-fade-in" style="animation-delay: 0.2s">Contact us today for a free, no-obligation consultation and let’s build the right tech solution for you.</p>
+            <a href="/contact/" class="inline-block bg-white text-brandDark hover:bg-brandSilver px-10 py-4 rounded-lg font-semibold transition-all hover:shadow-xl hover:-translate-y-1 animate-fade-in" style="animation-delay: 0.4s">
+                Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 md:py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
+                <div>© 2026 MGTECHNZ. All rights reserved.</div>
+                <div class="flex gap-6">
+                    <a href="/privacy-policy/" class="hover:text-brandDark transition-colors">Privacy Policy</a>
+                    <span>info@mgtechnz.kiwi</span>
+                    <span>+64 021 111 1171</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => { btn.classList.toggle('active'); menu.classList.toggle('open'); });
+        document.querySelectorAll('#mobileMenu a').forEach(link => link.addEventListener('click', () => { btn.classList.remove('active'); menu.classList.remove('open'); }));
+        window.addEventListener('scroll', () => { const header = document.querySelector('header'); if (window.scrollY > 20) header.classList.add('shadow-md', 'bg-white/98'); else header.classList.remove('shadow-md', 'bg-white/98'); });
+    </script>
+</body>
+</html>

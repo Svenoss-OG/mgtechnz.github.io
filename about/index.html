@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | MGTECHNZ</title>
+    <meta name="description" content="About MGTECHNZ — 10+ years delivering IT solutions across New Zealand, based in Waikato.">
+    <link rel="canonical" href="https://mgtechnz.kiwi/about/">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0A0A0F">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { brandDark: '#0A0A0F', brandMid: '#222429', brandGray: '#88929C', brandSilver: '#C8D0D8', brandWhite: '#FFFFFF', brandLight: '#F5F6F8' },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+                    animation: { 'fade-in': 'fadeIn 0.8s ease-out forwards', 'slide-up': 'slideUp 0.8s ease-out forwards', 'float': 'float 6s ease-in-out infinite', 'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite' },
+                    keyframes: { fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } }, slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } }, float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } } }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glow { box-shadow: 0 8px 30px rgba(200, 208, 216, 0.25); }
+        .active { border-bottom: 2px solid #0A0A0F; padding-bottom: 4px; }
+        html { scroll-behavior: smooth; }
+        .card-hover { transition: all 0.3s ease; }
+        .hamburger span { display: block; width: 24px; height: 2px; background-color: #0A0A0F; margin: 5px 0; border-radius: 2px; transition: all 0.3s ease; transform-origin: center; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.4s ease; opacity: 0; }
+        #mobileMenu.open { max-height: 300px; opacity: 1; }
+    </style>
+</head>
+<body class="bg-brandWhite text-brandDark font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <header class="w-full px-6 md:px-12 py-3 bg-white/95 backdrop-blur-sm shadow-sm fixed z-50 top-0 left-0 right-0 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3 animate-fade-in">
+                <img src="/logo-transparent.png" alt="MGTECHNZ Logo" class="h-10 w-auto">
+                <span class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</span>
+            </div>
+            <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
+                <a href="/home/" class="hover:text-brandGray transition-colors hover:scale-105">Home</a>
+                <a href="/about/" class="active transition-colors hover:text-brandDark">About</a>
+                <a href="/services/" class="hover:text-brandGray transition-colors hover:scale-105">Services</a>
+                <a href="/contact/" class="hover:text-brandGray transition-colors hover:scale-105">Contact</a>
+            </div>
+            <button class="md:hidden hamburger" id="mobileMenuBtn">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+        <div id="mobileMenu" class="md:hidden mt-4 pt-4 border-t border-gray-100">
+            <div class="flex flex-col gap-4 font-medium">
+                <a href="/home/" class="text-gray-600">Home</a>
+                <a href="/about/" class="text-brandDark active">About</a>
+                <a href="/services/" class="text-gray-600">Services</a>
+                <a href="/contact/" class="text-gray-600">Contact</a>
+                <a href="/privacy-policy/" class="text-gray-600 text-sm">Privacy Policy</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Content -->
+    <section class="pt-40 pb-24 md:pt-48 md:pb-32 bg-brandLight/50">
+        <div class="max-w-4xl mx-auto px-6 md:px-12">
+            <h1 class="text-[clamp(2.2rem,4vw,3.5rem)] font-bold mb-8 animate-fade-in">About MGTECHNZ</h1>
+            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm animate-slide-up">
+                <p class="text-lg mb-4">Founded over 10 years ago, MGTECHNZ is a 100% New Zealand owned and operated technology provider based in the Waikato region.</p>
+                <p class="text-lg mb-4">We specialise in delivering secure, scalable, and modern IT solutions — from cloud infrastructure and cybersecurity to custom software and managed support — tailored specifically for Kiwi businesses.</p>
+                <p class="text-lg mb-4">Our team combines local knowledge with global expertise, ensuring every client gets reliable, compliant, and future-proof technology that helps them grow.</p>
+                <p class="text-lg">We are proud to have served over 200 businesses across New Zealand, and we remain committed to excellence, security, and 24/7 support you can trust.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-10 md:py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-600">
+                <div>© 2026 MGTECHNZ. All rights reserved.</div>
+                <div class="flex gap-6">
+                    <a href="/privacy-policy/" class="hover:text-brandDark transition-colors">Privacy Policy</a>
+                    <span>info@mgtechnz.kiwi</span>
+                    <span>+64 021 111 1171</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobileMenuBtn');
+        const menu = document.getElementById('mobileMenu');
+        btn.addEventListener('click', () => { btn.classList.toggle('active'); menu.classList.toggle('open'); });
+        document.querySelectorAll('#mobileMenu a').forEach(link => link.addEventListener('click', () => { btn.classList.remove('active'); menu.classList.remove('open'); }));
+        window.addEventListener('scroll', () => { const header = document.querySelector('header'); if (window.scrollY > 20) header.classList.add('shadow-md', 'bg-white/98'); else header.classList.remove('shadow-md', 'bg-white/98'); });
+    </script>
+</body>
+</html>
