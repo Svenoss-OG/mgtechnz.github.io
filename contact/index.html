@@ -82,7 +82,7 @@
         </div>
     </section>
 
-    <!-- Contact Details -->
+    <!-- Contact Details & Form -->
     <section class="py-16 md:py-24 bg-white">
         <div class="max-w-5xl mx-auto px-6 md:px-12">
             <div class="grid md:grid-cols-2 gap-12 items-start">
@@ -94,7 +94,7 @@
                         <i class="fa-solid fa-location-dot text-xl text-brandDark mt-1"></i>
                         <div>
                             <h3 class="font-semibold text-lg">Location</h3>
-                            <p class="text-gray-600">Waikato, New Zealand<br>Serving clients nationwide</p>
+                            <p class="text-gray-600">Waikato, New Zealand<br>Serving clients nationwide — Auckland, Wellington, Christchurch & beyond</p>
                         </div>
                     </div>
 
@@ -102,7 +102,7 @@
                         <i class="fa-solid fa-envelope text-xl text-brandDark mt-1"></i>
                         <div>
                             <h3 class="font-semibold text-lg">Email</h3>
-                            <p class="text-gray-600">info@mgtechnz.kiwi</p>
+                            <p class="text-gray-600">info@mgtechnz.kiwi<br>support@mgtechnz.kiwi</p>
                         </div>
                     </div>
 
@@ -110,7 +110,7 @@
                         <i class="fa-solid fa-phone text-xl text-brandDark mt-1"></i>
                         <div>
                             <h3 class="font-semibold text-lg">Phone</h3>
-                            <p class="text-gray-600">+64 021 111 1171</p>
+                            <p class="text-gray-600">+64 021 111 1171<br>0800 TECH NZ (0800 832 469)</p>
                         </div>
                     </div>
 
@@ -118,30 +118,71 @@
                         <i class="fa-solid fa-clock text-xl text-brandDark mt-1"></i>
                         <div>
                             <h3 class="font-semibold text-lg">Business Hours</h3>
-                            <p class="text-gray-600">Monday – Friday: 9:00am – 5:00pm<br>24/7 emergency support available</p>
+                            <p class="text-gray-600">Monday – Friday: 9:00am – 5:00pm<br><strong>24/7 emergency support</strong> available for critical issues</p>
                         </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-share-nodes text-xl text-brandDark mt-1"></i>
+                        <div>
+                            <h3 class="font-semibold text-lg">Connect With Us</h3>
+                            <div class="flex gap-4 mt-2">
+                                <a href="#" class="text-brandDark hover:text-brandGray transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                                <a href="#" class="text-brandDark hover:text-brandGray transition-colors"><i class="fa-brands fa-facebook text-xl"></i></a>
+                                <a href="#" class="text-brandDark hover:text-brandGray transition-colors"><i class="fa-brands fa-instagram text-xl"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder -->
+                    <div class="mt-8 rounded-xl overflow-hidden shadow-sm h-48 bg-brandLight flex items-center justify-center">
+                        <span class="text-gray-500">Interactive Map: Waikato, New Zealand</span>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
                 <div class="bg-brandLight/50 rounded-2xl p-8 shadow-sm animate-slide-up" style="animation-delay: 0.2s">
                     <h2 class="text-2xl font-bold mb-6">Send Us a Message</h2>
+                    <p class="text-gray-600 mb-6">Fill out the form below and we’ll get back to you within 24 hours — or call us anytime for urgent enquiries.</p>
                     <form action="#" method="POST" class="space-y-5">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="Your full name">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="John Smith">
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                                <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="john@company.co.nz">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="+64 021 XXX XXXX">
+                            </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="your@email.co.nz">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="Your Business Ltd">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="What is this regarding?">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Service Interest *</label>
+                            <select required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition">
+                                <option value="">Select a service</option>
+                                <option value="cloud">Cloud Solutions</option>
+                                <option value="cyber">Cybersecurity</option>
+                                <option value="consulting">IT Consulting</option>
+                                <option value="managed">Managed IT Services</option>
+                                <option value="development">Custom Development</option>
+                                <option value="network">Network & Connectivity</option>
+                                <option value="other">Other / General Enquiry</option>
+                            </select>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                            <textarea rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="Tell us about your project or enquiry..."></textarea>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Message *</label>
+                            <textarea rows="5" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brandDark/20 focus:border-brandDark transition" placeholder="Tell us about your project, problem, or question — the more details, the better!"></textarea>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <input type="checkbox" required class="mt-1">
+                            <label class="text-sm text-gray-600">I agree to the <a href="/privacy-policy/" class="text-brandDark hover:underline">Privacy Policy</a> and understand how my data is used.</label>
                         </div>
                         <button type="submit" class="w-full bg-brandDark hover:bg-brandMid text-white font-medium py-3.5 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5">
                             Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
@@ -149,6 +190,46 @@
                     </form>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 md:py-24 bg-brandLight/30">
+        <div class="max-w-4xl mx-auto px-6 md:px-12">
+            <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-bold mb-12 text-center animate-fade-in">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm animate-slide-up" style="animation-delay: 0.1s">
+                    <h3 class="font-semibold text-lg mb-2">How quickly can you respond to urgent issues?</h3>
+                    <p class="text-gray-600">For emergency support, we aim to respond within 15 minutes — 24 hours a day, 7 days a week, including holidays.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm animate-slide-up" style="animation-delay: 0.2s">
+                    <h3 class="font-semibold text-lg mb-2">Do you work with small businesses as well as large enterprises?</h3>
+                    <p class="text-gray-600">Absolutely! We tailor our solutions to fit any size — from 1-person startups to 500+ employee organisations across NZ.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm animate-slide-up" style="animation-delay: 0.3s">
+                    <h3 class="font-semibold text-lg mb-2">Is there a cost for an initial consultation?</h3>
+                    <p class="text-gray-600">No — our first consultation is always free and without obligation. We’ll listen, assess your needs, and explain how we can help.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm animate-slide-up" style="animation-delay: 0.4s">
+                    <h3 class="font-semibold text-lg mb-2">Are your services compliant with New Zealand laws?</h3>
+                    <p class="text-gray-600">Yes — everything we do fully complies with the NZ Privacy Act, Health & Safety regulations, and industry standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-28 bg-brandDark text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-20">
+            <div class="absolute w-96 h-96 bg-brandSilver/10 rounded-full blur-3xl -top-40 -left-40"></div>
+            <div class="absolute w-96 h-96 bg-brandGray/10 rounded-full blur-3xl -bottom-40 -right-40"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">
+            <h2 class="text-[clamp(1.8rem,3vw,3rem)] font-bold mb-6 animate-fade-in">Prefer to Talk Directly?</h2>
+            <p class="text-lg md:text-xl text-brandSilver/90 mb-8 animate-fade-in" style="animation-delay: 0.2s">Call us right now — we’re ready to answer your questions and help you move forward.</p>
+            <a href="tel:+640211111171" class="inline-block bg-white text-brandDark hover:bg-brandSilver px-10 py-4 rounded-lg font-semibold transition-all hover:shadow-xl hover:-translate-y-1 animate-fade-in" style="animation-delay: 0.4s">
+                <i class="fa-solid fa-phone mr-2"></i> +64 021 111 1171
+            </a>
         </div>
     </section>
 

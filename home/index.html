@@ -70,25 +70,11 @@
             transition: all 0.3s ease;
             transform-origin: center;
         }
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-        #mobileMenu {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, opacity 0.4s ease;
-            opacity: 0;
-        }
-        #mobileMenu.open {
-            max-height: 300px;
-            opacity: 1;
-        }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        #mobileMenu { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, opacity 0.4s ease; opacity: 0; }
+        #mobileMenu.open { max-height: 300px; opacity: 1; }
     </style>
 </head>
 <body class="bg-brandWhite text-brandDark font-sans antialiased overflow-x-hidden">
@@ -96,24 +82,18 @@
     <!-- Navigation -->
     <header class="w-full px-6 md:px-12 py-3 bg-white/95 backdrop-blur-sm shadow-sm fixed z-50 top-0 left-0 right-0 transition-all duration-300">
         <nav class="max-w-7xl mx-auto flex justify-between items-center">
-            <!-- LOGO + BUSINESS NAME -->
             <div class="flex items-center gap-3 animate-fade-in">
                 <img src="/logo-transparent.png" alt="MGTECHNZ Logo" class="h-10 w-auto">
                 <span class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</span>
             </div>
-
             <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
                 <a href="/" class="active transition-colors hover:text-brandDark">Home</a>
                 <a href="/about/" class="hover:text-brandGray transition-colors hover:scale-105">About</a>
                 <a href="/services/" class="hover:text-brandGray transition-colors hover:scale-105">Services</a>
                 <a href="/contact/" class="hover:text-brandGray transition-colors hover:scale-105">Contact</a>
             </div>
-
-            <!-- Animated Hamburger -->
             <button class="md:hidden hamburger" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
         </nav>
         <div id="mobileMenu" class="md:hidden mt-4 pt-4 border-t border-gray-100">
@@ -141,7 +121,7 @@
                         Innovating<br>Tomorrow's Tech
                     </h1>
                     <p class="text-lg md:text-xl text-gray-600 max-w-xl animate-slide-up" style="animation-delay: 0.2s">
-                        Secure, scalable, and modern IT solutions built for New Zealand businesses.
+                        Secure, scalable, and modern IT solutions built for New Zealand businesses — from Waikato to nationwide.
                     </p>
                     <div class="grid sm:grid-cols-2 gap-4 lg:gap-5 mt-4">
                         <div class="bg-white rounded-xl p-6 shadow-sm card-hover hover:shadow-md hover:-translate-y-1 border border-gray-100 animate-slide-up" style="animation-delay: 0.3s">
@@ -231,6 +211,38 @@
         </div>
     </section>
 
+    <!-- Our Expertise Section -->
+    <section class="py-16 md:py-24 bg-brandLight/30">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-bold">Our Expertise</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">End-to-end technology solutions tailored to your industry and goals.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-slide-up" style="animation-delay: 0.1s">
+                    <i class="fa-solid fa-network-wired text-3xl text-brandDark mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Network Infrastructure</h3>
+                    <p class="text-gray-600 text-sm">Design, installation, and maintenance of fast, reliable networks for offices and remote teams.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-slide-up" style="animation-delay: 0.2s">
+                    <i class="fa-solid fa-database text-3xl text-brandDark mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Data Management</h3>
+                    <p class="text-gray-600 text-sm">Secure backup, storage, and recovery solutions to keep your critical business data safe and accessible.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-slide-up" style="animation-delay: 0.3s">
+                    <i class="fa-solid fa-laptop-code text-3xl text-brandDark mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Software Solutions</h3>
+                    <p class="text-gray-600 text-sm">Custom development, system integration, and software upgrades to streamline your operations.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-slide-up" style="animation-delay: 0.4s">
+                    <i class="fa-solid fa-satellite-dish text-3xl text-brandDark mb-4"></i>
+                    <h3 class="font-semibold text-lg mb-2">Communications</h3>
+                    <p class="text-gray-600 text-sm">VoIP, video conferencing, and unified communications to keep your team connected anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Section -->
     <section class="py-16 md:py-20 bg-brandLight/50">
         <div class="max-w-5xl mx-auto px-6 md:px-12">
@@ -250,6 +262,35 @@
                 <div class="animate-slide-up" style="animation-delay: 0.4s">
                     <div class="text-4xl md:text-5xl font-bold text-brandDark mb-2">24/7</div>
                     <div class="text-gray-600">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 animate-fade-in">
+                <h2 class="text-[clamp(1.8rem,3vw,2.8rem)] font-bold">What Our Clients Say</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-brandLight/50 p-8 rounded-2xl shadow-sm animate-slide-up" style="animation-delay: 0.1s">
+                    <div class="text-brandDark text-3xl mb-4">“</div>
+                    <p class="text-gray-600 mb-6">MGTECHNZ transformed our outdated systems into a secure, cloud-based environment. Their team is knowledgeable, responsive, and truly understands NZ business needs.</p>
+                    <div class="font-semibold">— Sarah M.</div>
+                    <div class="text-sm text-gray-500">Hamilton Manufacturing</div>
+                </div>
+                <div class="bg-brandDark text-white p-8 rounded-2xl shadow-md animate-slide-up" style="animation-delay: 0.2s">
+                    <div class="text-brandSilver text-3xl mb-4">“</div>
+                    <p class="text-brandSilver/90 mb-6">We rely on their 24/7 support and cybersecurity expertise. They’ve saved us from potential breaches multiple times and keep our operations running smoothly.</p>
+                    <div class="font-semibold">— John T.</div>
+                    <div class="text-sm text-brandSilver/70">Waikato Retail Group</div>
+                </div>
+                <div class="bg-brandLight/50 p-8 rounded-2xl shadow-sm animate-slide-up" style="animation-delay: 0.3s">
+                    <div class="text-brandDark text-3xl mb-4">“</div>
+                    <p class="text-gray-600 mb-6">From consulting to full implementation, they delivered exactly what we needed. Local support with global standards — highly recommended.</p>
+                    <div class="font-semibold">— Lisa K.</div>
+                    <div class="text-sm text-gray-500">Auckland Professional Services</div>
                 </div>
             </div>
         </div>
@@ -286,28 +327,11 @@
 
     <!-- Scripts -->
     <script>
-        // Animated Mobile Menu
         const btn = document.getElementById('mobileMenuBtn');
         const menu = document.getElementById('mobileMenu');
-        btn.addEventListener('click', () => {
-            btn.classList.toggle('active');
-            menu.classList.toggle('open');
-        });
-
-        // Close menu when link clicked
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                btn.classList.remove('active');
-                menu.classList.remove('open');
-            });
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 20) header.classList.add('shadow-md', 'bg-white/98');
-            else header.classList.remove('shadow-md', 'bg-white/98');
-        });
+        btn.addEventListener('click', () => { btn.classList.toggle('active'); menu.classList.toggle('open'); });
+        document.querySelectorAll('#mobileMenu a').forEach(link => link.addEventListener('click', () => { btn.classList.remove('active'); menu.classList.remove('open'); }));
+        window.addEventListener('scroll', () => { const header = document.querySelector('header'); if (window.scrollY > 20) header.classList.add('shadow-md', 'bg-white/98'); else header.classList.remove('shadow-md', 'bg-white/98'); });
     </script>
 </body>
 </html>

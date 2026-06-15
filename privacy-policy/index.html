@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | MGTECHNZ</title>
-    <meta name="description" content="MGTECHNZ Privacy Policy — how we collect, use, store and protect your personal information, compliant with New Zealand Privacy Act 2020.">
+    <meta name="description" content="Privacy Policy for MGTECHNZ — how we collect, use, store and protect your personal information in compliance with New Zealand Privacy Act.">
     <link rel="canonical" href="https://mgtechnz.kiwi/privacy-policy/">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -50,10 +50,11 @@
                 <span class="text-xl md:text-2xl font-bold tracking-widest">MGTECHNZ</span>
             </div>
             <div class="hidden md:flex gap-8 lg:gap-12 font-medium text-[15px]">
-                <a href="/home/" class="hover:text-brandGray transition-colors hover:scale-105">Home</a>
+                <a href="/" class="hover:text-brandGray transition-colors hover:scale-105">Home</a>
                 <a href="/about/" class="hover:text-brandGray transition-colors hover:scale-105">About</a>
                 <a href="/services/" class="hover:text-brandGray transition-colors hover:scale-105">Services</a>
                 <a href="/contact/" class="hover:text-brandGray transition-colors hover:scale-105">Contact</a>
+                <a href="/privacy-policy/" class="active transition-colors hover:text-brandDark">Privacy Policy</a>
             </div>
             <button class="md:hidden hamburger" id="mobileMenuBtn">
                 <span></span><span></span><span></span>
@@ -61,86 +62,141 @@
         </nav>
         <div id="mobileMenu" class="md:hidden mt-4 pt-4 border-t border-gray-100">
             <div class="flex flex-col gap-4 font-medium">
-                <a href="/home/" class="text-gray-600">Home</a>
+                <a href="/" class="text-gray-600">Home</a>
                 <a href="/about/" class="text-gray-600">About</a>
                 <a href="/services/" class="text-gray-600">Services</a>
                 <a href="/contact/" class="text-gray-600">Contact</a>
-                <a href="/privacy-policy/" class="text-brandDark active text-sm">Privacy Policy</a>
+                <a href="/privacy-policy/" class="text-brandDark active">Privacy Policy</a>
             </div>
         </div>
     </header>
 
-    <!-- Privacy Policy Content -->
-    <section class="pt-40 pb-24 md:pt-48 md:pb-32 bg-brandLight/50">
+    <!-- Hero Section -->
+    <section class="pt-40 pb-20 md:pt-48 md:pb-28 bg-brandLight/50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-30">
+            <div class="absolute w-72 h-72 bg-brandSilver/20 rounded-full blur-3xl -top-20 -left-20"></div>
+            <div class="absolute w-72 h-72 bg-brandGray/20 rounded-full blur-3xl -bottom-20 -right-20"></div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 md:px-12 text-center relative z-10">
+            <h1 class="text-[clamp(2.2rem,4vw,3.5rem)] font-bold mb-6 animate-fade-in">Privacy Policy</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto animate-fade-in" style="animation-delay: 0.2s">Your privacy is important to us. This policy explains how we collect, use, protect and handle your personal information, in line with the New Zealand Privacy Act 2020.</p>
+        </div>
+    </section>
+
+    <!-- Policy Content -->
+    <section class="py-16 md:py-24 bg-white">
         <div class="max-w-4xl mx-auto px-6 md:px-12">
-            <h1 class="text-[clamp(2.2rem,4vw,3.5rem)] font-bold mb-8 animate-fade-in">Privacy Policy</h1>
-            <p class="text-gray-600 mb-8 animate-fade-in" style="animation-delay: 0.1s"><strong>Last Updated:</strong> 16 June 2026</p>
-
-            <div class="bg-white p-8 md:p-10 rounded-2xl shadow-sm space-y-8 animate-slide-up">
+            <div class="prose prose-lg max-w-none text-gray-700 space-y-10 animate-slide-up">
+                
                 <div>
-                    <h2 class="text-xl font-semibold mb-3">1. Introduction</h2>
-                    <p class="text-gray-600">MGTECHNZ (“we”, “us”, “our”) respects your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and disclose your information in compliance with the <strong>New Zealand Privacy Act 2020</strong>.</p>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">1. Who We Are</h2>
+                    <p>MGTECHNZ is a New Zealand owned and operated technology service provider, based in the Waikato region. We provide IT solutions, cloud services, cybersecurity, and support to businesses across New Zealand. When we say “we”, “us”, or “our”, we refer to MGTECHNZ and our team.</p>
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-semibold mb-3">2. Information We Collect</h2>
-                    <p class="text-gray-600 mb-2">We may collect personal information that you voluntarily provide to us, including:</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Name, company name, and job title</li>
-                        <li>Contact details such as email address, phone number, and physical address</li>
-                        <li>Information provided in enquiries, forms, or support requests</li>
-                        <li>Technical data such as IP address, browser type, and usage patterns (via cookies or analytics)</li>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">2. What Information We Collect</h2>
+                    <p>We only collect information that is necessary for us to provide our services, communicate with you, and improve our offerings. This may include:</p>
+                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                        <li><strong>Personal details:</strong> Name, company name, email address, phone number, physical address — provided by you when contacting us, requesting a quote, or signing up for services.</li>
+                        <li><strong>Business information:</strong> Details about your organisation, systems, or IT requirements relevant to the work we do for you.</li>
+                        <li><strong>Technical data:</strong> IP addresses, device information, browser type, and usage data collected automatically when you visit our website — used for analytics, security, and improving user experience.</li>
+                        <li><strong>Communication records:</strong> Emails, messages, meeting notes, or support tickets exchanged between you and our team.</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-semibold mb-3">3. How We Use Your Information</h2>
-                    <p class="text-gray-600 mb-2">We use your information only for legitimate business purposes, including:</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Responding to your enquiries and providing requested services</li>
-                        <li>Managing our relationship and communicating with you</li>
-                        <li>Improving our website, services, and customer experience</li>
-                        <li>Complying with legal and regulatory obligations</li>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">3. How We Use Your Information</h2>
+                    <p>We use your information only for the purposes it was collected, including:</p>
+                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                        <li>Providing, managing, and maintaining our services and support.</li>
+                        <li>Responding to your enquiries, requests, or support tickets.</li>
+                        <li>Sending important updates, service notifications, or information relevant to your work with us.</li>
+                        <li>Improving our website, services, and customer experience.</li>
+                        <li>Complying with legal, regulatory, or contractual obligations.</li>
+                        <li>Protecting our rights, property, or safety, and that of our clients or others.</li>
                     </ul>
-                    <p class="text-gray-600 mt-2">We <strong>do not sell, rent, or trade</strong> your personal information to third parties for marketing purposes.</p>
+                    <p class="mt-3">We will <strong>never</strong> use your information for unrelated purposes without your explicit consent.</p>
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-semibold mb-3">4. Data Security</h2>
-                    <p class="text-gray-600">We implement appropriate technical and organisational measures to protect your information against unauthorised access, loss, misuse, or alteration. All data is stored securely within New Zealand or in compliance with NZ data protection standards.</p>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">4. How We Protect Your Information</h2>
+                    <p>We take the security of your personal and business information very seriously. We implement industry-standard measures including:</p>
+                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                        <li>Encryption of data in transit and at rest.</li>
+                        <li>Secure access controls and authentication for all systems.</li>
+                        <li>Regular security audits, updates, and vulnerability testing.</li>
+                        <li>Confidentiality agreements with all staff and authorised partners.</li>
+                        <li>Strict data retention policies — we keep data only as long as required by law or for legitimate business purposes.</li>
+                    </ul>
+                    <p class="mt-3">While we strive to protect your information, no method of transmission over the internet or electronic storage is 100% secure. We work to maintain the highest possible level of security.</p>
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-semibold mb-3">5. Your Rights</h2>
-                    <p class="text-gray-600 mb-2">Under the Privacy Act 2020, you have the right to:</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Request access to the personal information we hold about you</li>
-                        <li>Request correction of any inaccurate information</li>
-                        <li>Request deletion of your information where legally permitted</li>
-                        <li>Withdraw consent for marketing communications at any time</li>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">5. Sharing Your Information</h2>
+                    <p>We do <strong>not</strong> sell, rent, or trade your personal information to third parties for marketing purposes. We may share information only in these cases:</p>
+                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                        <li><strong>Authorised service providers:</strong> Trusted partners who assist us in delivering services (e.g., cloud hosting, payment processing), bound by strict privacy and confidentiality obligations.</li>
+                        <li><strong>Legal requirements:</strong> When required by law, court order, or government authority in New Zealand.</li>
+                        <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets — always under the same privacy protections.</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-semibold mb-3">6. Third-Party Services</h2>
-                    <p class="text-gray-600">Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites. We encourage you to review their privacy policies before providing any personal information.</p>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">6. Your Rights Under NZ Law</h2>
+                    <p>Under the <strong>New Zealand Privacy Act 2020</strong>, you have the right to:</p>
+                    <ul class="list-disc pl-6 mt-2 space-y-1">
+                        <li>Request access to the personal information we hold about you.</li>
+                        <li>Request correction of any inaccurate or incomplete information.</li>
+                        <li>Request deletion of your information, where legally permitted.</li>
+                        <li>Withdraw consent for processing, where consent was the legal basis for use.</li>
+                        <li>Lodge a complaint with the Office of the Privacy Commissioner if you believe your privacy rights have been breached.</li>
+                    </ul>
+                    <p class="mt-3">To exercise any of these rights, please contact us using the details below — we will respond within the timeframe required by law.</p>
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-semibold mb-3">7. Changes to This Policy</h2>
-                    <p class="text-gray-600">We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">7. Cookies and Tracking</h2>
+                    <p>Our website uses cookies and similar technologies to improve performance, analyse traffic, and personalise your experience. You can control or disable cookies through your browser settings — however, some features of the site may not function correctly if you do so.</p>
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-semibold mb-3">8. Contact Us</h2>
-                    <p class="text-gray-600">If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your data, please contact us:</p>
-                    <p class="text-gray-600 mt-2">
-                        <strong>Email:</strong> info@mgtechnz.kiwi<br>
-                        <strong>Phone:</strong> +64 021 111 1171<br>
-                        <strong>Address:</strong> Waikato, New Zealand
-                    </p>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">8. Third-Party Links</h2>
+                    <p>Our website may contain links to external sites or services not operated by us. We have no control over and are not responsible for the privacy practices or content of those sites. We encourage you to read the privacy policy of every website you visit.</p>
                 </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">9. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or services. The latest version will always be posted on this page with the effective date. We recommend reviewing this page periodically.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-brandDark mb-4">10. Contact Us</h2>
+                    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how we handle your information, please contact our Privacy Officer:</p>
+                    <div class="mt-4 bg-brandLight/50 p-5 rounded-lg">
+                        <p><strong>MGTECHNZ</strong><br>
+                        Waikato, New Zealand<br>
+                        Email: info@mgtechnz.kiwi<br>
+                        Phone: +64 021 111 1171</p>
+                    </div>
+                </div>
+
+                <p class="text-sm text-gray-500 mt-8">Effective Date: 1 January 2026</p>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 md:py-28 bg-brandDark text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-20">
+            <div class="absolute w-96 h-96 bg-brandSilver/10 rounded-full blur-3xl -top-40 -left-40"></div>
+            <div class="absolute w-96 h-96 bg-brandGray/10 rounded-full blur-3xl -bottom-40 -right-40"></div>
+        </div>
+        <div class="max-w-4xl mx-auto px-6 md:px-12 text-center relative z-10">
+            <h2 class="text-[clamp(1.8rem,3vw,3rem)] font-bold mb-6 animate-fade-in">Have Questions?</h2>
+            <p class="text-lg md:text-xl text-brandSilver/90 mb-10 animate-fade-in" style="animation-delay: 0.2s">We are happy to explain anything about how we protect your data — reach out anytime.</p>
+            <a href="/contact/" class="inline-block bg-white text-brandDark hover:bg-brandSilver px-10 py-4 rounded-lg font-semibold transition-all hover:shadow-xl hover:-translate-y-1 animate-fade-in" style="animation-delay: 0.4s">
+                Contact Us
+            </a>
         </div>
     </section>
 
